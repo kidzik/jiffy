@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jiffy"
+version = "0.1.0.dev0"
+description = "Parallel typed decisions over documents and images with DiffusionGemma"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch==2.13.0",
+  "torchvision==0.28.0",
+  "transformers==5.17.0",
+  "safetensors==0.8.0",
+  "pillow==12.3.0",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1,<2"]
+
+[project.scripts]
+jiffy = "jiffy.diffusion_decisions:main"
+jiffy-decide = "jiffy.diffusion_decisions:main"
+
+[tool.setuptools.packages.find]
+include = ["jiffy*"]
+
+[project.urls]
+Repository = "https://github.com/kidzik/jiffy"
