@@ -1,13 +1,16 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "jiffy"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Parallel typed decisions over documents and images with DiffusionGemma"
 readme = "README.md"
 requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Operating System :: POSIX :: Linux"]
 dependencies = [
   "torch==2.13.0",
   "torchvision==0.28.0",
@@ -17,11 +20,13 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["build>=1,<2"]
+dev = ["build>=1,<2", "httpx==0.28.1", "fastapi==0.136.3", "typesafe-sdk==0.7.1"]
+serve = ["fastapi==0.136.3", "uvicorn==0.53.0"]
 
 [project.scripts]
 jiffy = "jiffy.diffusion_decisions:main"
 jiffy-decide = "jiffy.diffusion_decisions:main"
+jiffy-serve = "jiffy.server:main"
 
 [tool.setuptools.packages.find]
 include = ["jiffy*"]

@@ -9,3 +9,8 @@ artifacts/
 .env.*
 *.safetensors
 *.pt
+.agents/
+.codex/
+.pytest_cache/
+.ruff_cache/
+result.json

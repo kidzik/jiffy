@@ -1,0 +1,18 @@
+Jiffy
+Copyright 2026 Jiffy contributors
+
+This project is licensed under the Apache License, Version 2.0.
+
+Google's DiffusionGemma model and processor are downloaded separately. Model
+weights are not distributed in this repository or release packages.
+Upstream model terms and notices:
+https://huggingface.co/google/diffusiongemma-26B-A4B-it
+
+Runtime dependencies, including PyTorch, Transformers, and Pillow, retain
+their own licenses and notices. They are not bundled in Jiffy's wheel.
+
+Optional JevBench evaluation uses a separately checked-out MIT-licensed
+harness and public tasks: https://github.com/fstandhartinger/jevbench
+Other datasets and endpoints referenced there retain their own terms.
+
+Jiffy is independent of and is not endorsed by Google or TypeSafe AI.
