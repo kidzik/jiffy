@@ -8,6 +8,32 @@ complete probability distributions. No task-specific training is required.
 affiliated with TypeSafe AI. API interoperability is tested; equal accuracy,
 calibration, and latency are not promised. Probabilities are uncalibrated.
 
+## Demos
+
+[Demos and run commands](docs/demos/README.md). These games use structured
+state, not pixel-only control. Recordings are accelerated, not real-time
+inference measurements. Game dependencies are optional.
+
+### Doom
+
+Jiffy explores a full Freedoom level: 2 kills and 8 items collected, without
+reaching the exit. [Run Doom](docs/doom.md).
+
+![Jiffy playing Freedoom, at 3x game-time playback](docs/demos/assets/doom.gif)
+
+### Tetris
+
+Jiffy and Jev play the same 60-piece sequence. Jiffy: **15 lines / 4,540 points**;
+Jev: **17 lines / 4,372 points**. Both survive. Models choose legal placements
+with one-piece outcome previews. [Run Tetris](docs/tetris.md).
+
+![Jiffy versus Jev Tetris, animated placement replay](docs/demos/assets/tetris.gif)
+
+### Pong
+
+Jiffy and Jev control opposing paddles using simultaneous decisions.
+The head-to-head demo is under active development. [Pong status](docs/demos/README.md#pong).
+
 ## Install
 
 Validated runtime: Linux, Python 3.10, CUDA, NVIDIA H100 80GB, BF16.

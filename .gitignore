@@ -14,3 +14,4 @@ artifacts/
 .pytest_cache/
 .ruff_cache/
 result.json
+_vizdoom.ini
